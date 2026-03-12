@@ -1,0 +1,49 @@
+.welcome-container {
+  text-align: center;
+}
+
+.greeting {
+  font-size: 1.5em;
+}
+
+.h1_gradient {
+  background: linear-gradient(180deg, #f00 50%, #000 0);
+  background-clip: text;
+  color: transparent;
+}
+
+.time {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.menu-link {
+  --white-alpha-80: hsla(0, 0%, 100%);
+  background-color: var(--white-alpha-80);
+  color: #000;
+  display: inline-block;
+  padding: 22px 24px;
+  border-radius: 16px;
+  font-size: 1.1em;
+  text-align: center;
+  text-decoration: none;
+}
+.main_card {
+  --signal-red: #eb4247;
+  background-color: var(--signal-red);
+  background-image: url(DLWchHXZ.svg);
+  background-position: right -200px bottom -200px;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  --white-alpha-80: hsla(0, 0%, 100%, 0.8);
+  color: var(--white-alpha-80);
+  text-align: left;
+}
+
+.main_card_p {
+  margin-bottom: 60px;
+}

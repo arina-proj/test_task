@@ -1,0 +1,48 @@
+<div class="menu-page">
+  <div class="order-header">
+    <h2>Ваш заказ</h2>
+    <div>
+      <div class="stats">
+        <span class="count">Количество: {{ selectedCount }}</span>
+        <span class="price">Сумма: {{ totalPrice }} ₽</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="menu-layout">
+    <div class="categories-sidebar">
+      <h3>Категории</h3>
+      <ul class="categories-list">
+        @for (category of categories; track category) {
+          <li
+            [class.active]="selectedCategory === category"
+            (click)="selectCategory(category)"
+            class="category-item"
+          >
+            {{ category }}
+          </li>
+        }
+      </ul>
+    </div>
+
+    <!-- Правая колонка - меню -->
+    <div class="menu-content">
+      @for (item of filteredItems; track item.id) {
+        <div class="menu-item">
+          <label>
+            <input type="checkbox" [(ngModel)]="item.selected" [value]="item.id" />
+            <span class="item-name">{{ item.name }}</span>
+            <span class="item-price">{{ item.price }} ₽</span>
+          </label>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="footer-nav">
+    <a routerLink="/" class="back-link">← На главную</a>
+    <button (click)="clearSelection()" class="clear-btn" [disabled]="selectedCount === 0">
+      Очистить выбор
+    </button>
+  </div>
+</div>

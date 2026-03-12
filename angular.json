@@ -6,7 +6,7 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "food-menu-app": {
+    "test-project": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -66,10 +66,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "food-menu-app:build:production"
+              "buildTarget": "test-project:build:production"
             },
             "development": {
-              "buildTarget": "food-menu-app:build:development"
+              "buildTarget": "test-project:build:development"
             }
           },
           "defaultConfiguration": "development"
